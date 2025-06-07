@@ -1,6 +1,7 @@
 import { Articles } from "@/types/global";
 import { useRouter } from "next/navigation";
 import NotFountImage from "@/image-404.jpg";
+import { formatDate } from "@/utils/helper";
 
 interface ArticleListInterface {
   articles?: Articles;
@@ -12,30 +13,8 @@ export default function ArticleList({
   isLoading = false,
 }: ArticleListInterface) {
   const router = useRouter();
-  function formatDate(dateString: string): string {
-    if (!dateString) return "";
-    const date = new Date(dateString);
-    const months = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
-    ];
-    const month = months[date.getMonth()];
-    const day = String(date.getDate()).padStart(2, "0");
-    const year = date.getFullYear();
-    return `${month} ${day}, ${year}`;
-  }
   const handleOpenDetailArticle = (id: string) => {
-    router.push(`article/detail/?articleId=${id}`);
+    router.push(`article/detail-article/?articleId=${id}`);
   };
 
   return (
