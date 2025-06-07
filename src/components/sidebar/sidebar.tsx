@@ -6,6 +6,7 @@ import { LogOut, NewspaperIcon, TagIcon, X } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { AlertDialogCategory } from "../popup-alert/alert";
 import { Sidebar } from "@/types/global";
+import Image from "next/image";
 
 function SidebarComponent({ isOpenNav, handleNavbarClicked }: Sidebar) {
   const [swetAlert, setSwetAlert] = useState({
@@ -95,10 +96,12 @@ function SidebarComponent({ isOpenNav, handleNavbarClicked }: Sidebar) {
         }`}
       >
         <div className="max-[1070px]:flex max-[1070px]:justify-between max-[1070px]:items-center">
-          <img
+          <Image
             className="w-[8rem] max-[500px]:w-[8rem]"
             src={LogoImage?.src}
             alt="Image of header login"
+            width={128}
+            height={128}
           />
           <X
             onClick={handleNavbarClicked}
