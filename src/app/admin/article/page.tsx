@@ -34,6 +34,7 @@ import { useRouter } from "next/navigation";
 import { AlertDialogCategory } from "@/components/popup-alert/alert";
 import imageNotAvailable from "../../../assets/image-404.jpg";
 import { formatDate } from "@/utils/helper";
+import Image from "next/image";
 
 function ArticleComponent() {
   const [articles, setArticles] = useState<Articles>();
@@ -323,10 +324,14 @@ function ArticleComponent() {
                   {articles?.data?.map((el: Article) => (
                     <TableRow key={el?.id}>
                       <TableCell className="text-center">
-                        <img
-                          className="w-10 h-10 rounded-sm m-auto object-cover"
-                          src={el?.imageUrl || imageNotAvailable?.src}
-                        />
+                        <div className="w-10 h-10 relative m-auto">
+                          <Image
+                            src={el?.imageUrl || imageNotAvailable?.src}
+                            alt="Category image"
+                            fill
+                            className="rounded-sm object-cover"
+                          />
+                        </div>
                       </TableCell>
                       <TableCell className="max-w-[140px] break-words whitespace-normal text-[#475569]">
                         {el?.title}
