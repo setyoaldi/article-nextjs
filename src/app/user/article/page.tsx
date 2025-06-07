@@ -4,8 +4,8 @@ import HeaderComponent from "@/components/header/header";
 import HeroSection from "./hero-section";
 import ArticleList from "./list-article";
 import FooterComponent from "@/components/footer/footer";
-import logoPutih from "@/logoipsum-putih.png";
-import logoBiru from "@/logoipsum-biru.png";
+import logoPutih from "../../../../public/logoipsum-putih.png";
+import logoBiru from "../../../../public/logoipsum-biru.png";
 import { useState, useEffect } from "react";
 import { getAllArticles, getAllCategory, getUserProfile } from "@/api/admin";
 import {

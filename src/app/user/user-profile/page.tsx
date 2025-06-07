@@ -1,16 +1,16 @@
 "use client";
 
 import HeaderComponent from "@/components/header/header";
-import logoBiru from "@/logoipsum-biru.png";
+import logoBiru from "../../../../public/logoipsum-biru.png";
 import { UserProfile } from "@/types/global";
 import { useState, useEffect } from "react";
 import { getUserProfile } from "@/api/admin";
 import PrimaryButton from "@/components/button/primary-button";
 import FooterComponent from "@/components/footer/footer";
-import logoPutih from "@/logoipsum-putih.png";
+import logoPutih from "../../../../public/logoipsum-biru.png";
 import { useRouter } from "next/navigation";
 
-function UserProfileComponent() {
+export default function UserProfileComponent() {
   const [userProfile, setUserProfile] = useState<UserProfile>();
   const router = useRouter();
 
@@ -28,7 +28,6 @@ function UserProfileComponent() {
 
   return (
     <div className="w-full flex flex-col min-h-screen bg-white">
-      {/* Call header component */}
       <HeaderComponent
         style="w-full bg-[#F9FAFB] h-[68px] flex justify-between items-center px-10 border-b border-b-[#E2E8F0]"
         wraperProfileStyle="flex gap-1 items-center"
