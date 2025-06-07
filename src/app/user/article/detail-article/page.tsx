@@ -73,7 +73,7 @@ function ArticleDetail() {
   }, [dataArticle]);
 
   const handleClickRelated = (articleId: string) => {
-    router.push(`/article/detail-article?articleId=${articleId}`);
+    router.push(`/user/article/detail-article?articleId=${articleId}`);
   };
 
   return (
@@ -88,7 +88,7 @@ function ArticleDetail() {
         logoStyle="w-[7rem]"
         profileText={userProfile?.username}
         logoClickable={true}
-        logoRedirectTo="/article"
+        logoRedirectTo="/user/article"
         dropdown="yes"
       />
       <div className="w-full min-h-screen px-[160px] max-[800px]:px-[100px] max-[700px]:px-[80px] max-[600px]:px-[60px] max-[500px]:px-[25px] pt-[68px]">
