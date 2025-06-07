@@ -1,6 +1,6 @@
 import { Articles } from "@/types/global";
 import { useRouter } from "next/navigation";
-import NotFountImage from "@/image-404.jpg";
+import NotFountImage from "../../../assets/image-404.jpg";
 import { formatDate } from "@/utils/helper";
 
 interface ArticleListInterface {
