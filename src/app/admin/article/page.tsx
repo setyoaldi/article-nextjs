@@ -330,7 +330,7 @@ function ArticleComponent() {
                           <div className="w-10 h-10 relative m-auto">
                             <Image
                               src={el?.imageUrl || imageNotAvailable?.src}
-                              alt="Category image"
+                              alt={imageNotAvailable?.src}
                               fill
                               className="rounded-sm object-cover"
                             />
