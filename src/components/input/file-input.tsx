@@ -1,10 +1,4 @@
-interface InputTypeFIleInterface {
-  isLabelOutside?: boolean;
-  styleForInput?: string;
-  styleForLabel?: string;
-  styleForWrapper?: string;
-  labelText?: string;
-}
+import { InputFileInterface } from "@/types/global";
 
 function InputTypeFile({
   isLabelOutside,
@@ -12,7 +6,7 @@ function InputTypeFile({
   styleForLabel,
   styleForWrapper,
   labelText,
-}: InputTypeFIleInterface) {
+}: InputFileInterface) {
   return (
     <>
       {isLabelOutside ? (

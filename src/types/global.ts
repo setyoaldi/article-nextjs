@@ -152,3 +152,35 @@ export interface QuillEditorComponentProps {
 }
 
 export const baseUrl = "https://test-fe.mysellerpintar.com/api/";
+
+export type RichTextEditorHandle = {
+    getContent: () => string;
+};
+
+export interface Sidebar {
+    isOpenNav?: boolean;
+    handleNavbarClicked?: () => void;
+}
+
+export interface DialogWrapperProps {
+    open?: boolean;
+    onClose?: () => void;
+    onConfirm?: () => void;
+    onOpenChange?: (open: boolean) => void;
+    title?: string;
+    footer?: ReactNode;
+    onDialogClose?: (responValue: boolean) => void;
+    description?: string;
+}
+
+export interface InputFileInterface {
+    isLabelOutside?: boolean;
+    styleForInput?: string;
+    styleForLabel?: string;
+    styleForWrapper?: string;
+    labelText?: string;
+}
+export interface UniqueCategoryInterface {
+    name?: string;
+    id?: string;
+}
