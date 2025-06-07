@@ -41,3 +41,11 @@ export function formatDate(dateString: string): string {
     const year = date.getFullYear();
     return `${month} ${day}, ${year}`;
 }
+
+export function getToken(): string | null {
+    if (typeof document === 'undefined') return null;
+    const token = document.cookie
+        .split(';')
+        .find(cookie => cookie.trim().startsWith('token='));
+    return token ? token.split('=')[1].trim() : null;
+}

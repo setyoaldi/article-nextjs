@@ -1,7 +1,6 @@
 import { Articles, Category, UserProfile, baseUrl } from "@/types/global";
 import axios from "axios";
-
-const token = document?.cookie?.split(';').filter(el => el.trim().startsWith('token')).join('').replace('token=', '').trim();
+import { getToken } from "@/utils/helper";
 
 export async function getAllArticles(title: string, page = 1, limit = 10, category?: string): Promise<Articles> {
     try {
@@ -20,6 +19,7 @@ export async function getAllArticles(title: string, page = 1, limit = 10, catego
 }
 
 export async function getUserProfile(): Promise<UserProfile> {
+    const token = getToken();
     try {
         const respon = await axios.get(`${baseUrl}auth/profile`, {
             headers: {
@@ -48,6 +48,7 @@ export async function getAllCategory(page: number, limit: number, search?: strin
 }
 
 export async function uploadImage(imageFile: File): Promise<string> {
+    const token = getToken();
     try {
         const formData = new FormData();
         formData.append('image', imageFile);
@@ -64,6 +65,7 @@ export async function uploadImage(imageFile: File): Promise<string> {
 }
 
 export async function createCategory(name: string): Promise<Category> {
+    const token = getToken();
     try {
         const respon = await axios.post(
             `${baseUrl}categories`,
@@ -84,6 +86,7 @@ export async function createCategory(name: string): Promise<Category> {
 }
 
 export async function editCategory(id: string, name: string): Promise<Category> {
+    const token = getToken();
     try {
         const respon = await axios.put(
             `${baseUrl}categories/${id}`,
@@ -104,6 +107,7 @@ export async function editCategory(id: string, name: string): Promise<Category> 
 }
 
 export async function deleteCategory(id: string): Promise<Category> {
+    const token = getToken();
     try {
         const respon = await axios.delete(`${baseUrl}categories/${id}`, {
             headers: {
@@ -117,6 +121,7 @@ export async function deleteCategory(id: string): Promise<Category> {
 }
 
 export async function createArticle(title: string, content: string, categoryId: string): Promise<Category> {
+    const token = getToken();
     try {
         const respon = await axios.post(`${baseUrl}articles`, {
             title,
@@ -136,6 +141,7 @@ export async function createArticle(title: string, content: string, categoryId: 
 }
 
 export async function editArticle(title: string, content: string, categoryId: string, id: string): Promise<Category> {
+    const token = getToken();
     try {
         const respon = await axios.put(`${baseUrl}articles/${id}`, {
             title,
@@ -154,6 +160,7 @@ export async function editArticle(title: string, content: string, categoryId: st
 }
 
 export async function deleteArticle(id: string): Promise<Category> {
+    const token = getToken();
     try {
         const respon = await axios.delete(`${baseUrl}articles/${id}`, {
             headers: {

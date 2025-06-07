@@ -1,6 +1,6 @@
 "use client";
 
-import LogoImage from "../../assets/image.png";
+import LogoImage from "../../../public/logoipsum-putih.png";
 import { redirect, usePathname } from "next/navigation";
 import { LogOut, NewspaperIcon, TagIcon, X } from "lucide-react";
 import React, { useEffect, useState } from "react";
