@@ -9,7 +9,7 @@ import { getUserProfile } from "@/api/admin";
 import FooterComponent from "@/components/footer/footer";
 import { useRouter, useSearchParams } from "next/navigation";
 import { CircleX } from "lucide-react";
-import imageNotAvailable from "../../../assets/image not availabe.jpg";
+import imageNotAvailable from "../../../assets/image-404.jpg";
 import { formatDate } from "@/utils/helper";
 
 interface EditData {
