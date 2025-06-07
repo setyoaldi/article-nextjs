@@ -3,13 +3,13 @@
 import HeaderComponent from "@/components/header/header";
 import { UserProfile } from "@/types/global";
 import { useEffect, useState } from "react";
-import logoImageUrl from "../../../assets/logoipsum-biru.png";
-import logoFooterImageUrl from "../../../assets/logoipsum-putih.png";
+import logoImageUrl from "../../assets/logoipsum-biru.png";
+import logoFooterImageUrl from "../../assets/logoipsum-putih.png";
+import imageNotAvailable from "../../assets/image-404.jpg";
 import { getUserProfile } from "@/api/admin";
 import FooterComponent from "@/components/footer/footer";
 import { useRouter, useSearchParams } from "next/navigation";
 import { CircleX } from "lucide-react";
-import imageNotAvailable from "../../../assets/image-404.jpg";
 import { formatDate } from "@/utils/helper";
 
 interface EditData {
