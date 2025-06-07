@@ -55,7 +55,7 @@ export default function LoginPage() {
         if (role === "Admin") {
           window.location.href = "/admin/article";
         } else if (role === "User") {
-          window.location.href = "/article";
+          window.location.href = "/user/article";
         }
       } catch (e) {
         toast.error(`Failed Register : ${e}`);
