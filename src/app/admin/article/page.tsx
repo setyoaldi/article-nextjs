@@ -191,7 +191,7 @@ function ArticleComponent() {
   const openPreview = (article: Article) => {
     sessionStorage.setItem("temporaryContentPreview", article?.content ?? "");
     router.push(
-      `/preview?articleId=${article?.id}&imageUrl=${article?.imageUrl}&title=${article?.title}&categoryName=${article?.category?.name}&categoryId=${article?.categoryId}&createAd=${article?.createdAt}`
+      `/admin/preview?articleId=${article?.id}&imageUrl=${article?.imageUrl}&title=${article?.title}&categoryName=${article?.category?.name}&categoryId=${article?.categoryId}&createAd=${article?.createdAt}`
     );
   };
   function getPageList(currentPage: number, totalPages: number) {
