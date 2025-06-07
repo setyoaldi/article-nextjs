@@ -1,13 +1,13 @@
 "use client";
 
 import HeaderComponent from "@/components/header/header";
-import logoBiru from "../../../../public/logoipsum-biru.png";
+import logoBiru from "../../../assets/logoipsum-biru.png";
 import { UserProfile } from "@/types/global";
 import { useState, useEffect } from "react";
 import { getUserProfile } from "@/api/admin";
 import PrimaryButton from "@/components/button/primary-button";
 import FooterComponent from "@/components/footer/footer";
-import logoPutih from "../../../../public/logoipsum-biru.png";
+import logoPutih from "../../../assets/logoipsum-biru.png";
 import { useRouter } from "next/navigation";
 
 export default function UserProfileComponent() {

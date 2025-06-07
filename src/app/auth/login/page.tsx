@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import InputTypeText from "@/components/input/text-input";
 import PrimaryButton from "@/components/button/primary-button";
 import InputTypePassword from "@/components/input/password-input";
-import LogoIpsumBiru from "../../../../public/logoipsum-biru.png";
+import LogoIpsumBiru from "../../../assets/logoipsum-biru.png";
 import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
 import { useForm, Controller } from "react-hook-form";

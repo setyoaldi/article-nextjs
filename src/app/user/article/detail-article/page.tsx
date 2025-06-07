@@ -2,8 +2,8 @@
 
 import { Suspense } from "react";
 import HeaderComponent from "@/components/header/header";
-import logoPutih from "../../../../public/logoipsum-putih.png";
-import logoBiru from "../../../../public/logoipsum-biru.png";
+import logoPutih from "../../../../assets/logoipsum-putih.png";
+import logoBiru from "../../../../assets/logoipsum-biru.png";
 import { useState, useEffect } from "react";
 import { Article, Articles, UserProfile } from "@/types/global";
 import { getArticleById } from "@/api/user";
