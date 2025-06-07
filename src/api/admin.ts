@@ -14,7 +14,7 @@ export async function getAllArticles(title: string, page = 1, limit = 10, catego
         });
         return respon.data;
     } catch (err) {
-        throw new Error("Failed when try to getAllArticles");
+        throw new Error(`Error when getAllArticles: ${err}`);
     }
 }
 
