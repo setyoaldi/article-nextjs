@@ -6,6 +6,6 @@ export async function getArticleById(id: string) {
         const respon = await axios.get(`${baseUrl}articles/?articleId=${id}`);
         return respon.data;
     } catch (err) {
-        throw new Error("Failed when try to getArticleById");
+        throw new Error(`Error when getArticleById: ${err}`);
     }
 }
