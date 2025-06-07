@@ -32,7 +32,7 @@ import { deleteArticle, getAllArticles, getAllCategory } from "@/api/admin";
 import { Article, Articles, Category, Categorys } from "@/types/global";
 import { useRouter } from "next/navigation";
 import { AlertDialogCategory } from "@/components/popup-alert/alert";
-import imageNotAvailable from "../../../../public/image-404.jpg";
+import imageNotAvailable from "../../../assets/image-404.jpg";
 import { formatDate } from "@/utils/helper";
 
 function ArticleComponent() {

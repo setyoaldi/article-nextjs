@@ -1,5 +1,5 @@
 import { Category, UniqueCategoryInterface } from "@/types/global";
-import HeroImg from "@/youngmale.jpg";
+import HeroImg from "../../../assets/youngmale.jpg";
 import {
   Select,
   SelectContent,
