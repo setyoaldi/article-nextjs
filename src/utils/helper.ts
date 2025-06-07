@@ -18,3 +18,26 @@ export function useDebounce(value: string, delay = 300) {
     }, [value, delay]);
     return debouncedValue;
 }
+
+export function formatDate(dateString: string): string {
+    if (!dateString) return "";
+    const date = new Date(dateString);
+    const months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+    ];
+    const month = months[date.getMonth()];
+    const day = String(date.getDate()).padStart(2, "0");
+    const year = date.getFullYear();
+    return `${month} ${day}, ${year}`;
+}
