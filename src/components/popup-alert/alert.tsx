@@ -8,18 +8,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import { ReactNode } from "react";
-
-interface DialogWrapperProps {
-  open?: boolean;
-  onClose?: () => void;
-  onConfirm?: () => void;
-  onOpenChange?: (open: boolean) => void;
-  title?: string;
-  footer?: ReactNode;
-  onDialogClose?: (responValue: boolean) => void;
-  description?: string;
-}
+import { DialogWrapperProps } from "@/types/global";
 
 export function AlertDialogCategory({
   open,
